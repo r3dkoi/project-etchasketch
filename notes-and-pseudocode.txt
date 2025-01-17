@@ -1,0 +1,13 @@
+1. Creating the 16x16 grid
+    - Apparently have to make it into a nested loop
+    - Using for loop    
+        - Outer loop = 16 times iteration for the rows
+        - Inner loop = 16 times iteration for the columns
+
+Copilot generated a pseudocode for me to follow to make it easier:
+FOR (let rows = 0, rows < 16; rows++) {
+    // outer loop for rows
+    for (let columns = 0; rows < 16; rows++){
+        CREATE
+    }
+}
