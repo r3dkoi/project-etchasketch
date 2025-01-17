@@ -4,10 +4,18 @@
         - Outer loop = 16 times iteration for the rows
         - Inner loop = 16 times iteration for the columns
 
-Copilot generated a pseudocode for me to follow to make it easier:
-FOR (let rows = 0, rows < 16; rows++) {
+CREATE FOR 
+    SET rows to 0
+    CONDITION rows LESS than 16
+    INCREMENT rows by 1
     // outer loop for rows
-    for (let columns = 0; rows < 16; rows++){
-        CREATE
-    }
-}
+
+
+        CREATE another FOR inside rows loop
+            SET columns to 0
+            CONDITION columns LESS than 16
+            INCREMENT columns by 1
+                    CREATE div element here
+                    APPEND div to container
+            ENDFOR
+ENDFOR
