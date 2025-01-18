@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
             container.appendChild(div);
         }
     }
-
+    container.addEventListener("mouseover", function (event) {
+        const div = event.target.closest(".grid-item");
+        if (div) {
+            div.style.background = "red";
+        }
+    });
 });
 
