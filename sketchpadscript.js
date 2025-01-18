@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-document.addEventListener("hover", function () {
-    document.querySelector("div");
-    
-
-})
+document.addEventListener("mouseover", function (event) {
+    const div = event.target.closest(".container div");
+    if (div) {
+        div.style.color = "red";
+    }
+});
