@@ -9,3 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+document.addEventListener("hover", function () {
+    document.querySelector("div");
+    
+
+})
