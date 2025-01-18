@@ -20,5 +20,14 @@ CREATE FOR
             ENDFOR
 ENDFOR
 
+- Had to research about DOMContentLoaded .addEventListener here
+- 
+
+
 2. Using Flexbox to make the divs appear as a grid
     - Probably adjust the border of each first to see how they all look.
+        - Use CSS to edit the div elements inside the .container
+        - Find a way to rename the "div"s made inside the javascript so its easier
+            for me to target?
+                - Nah I dont need to do that, I can just target the "div" element, but I gotta check if it affects the .container div too
+        
