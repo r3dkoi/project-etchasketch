@@ -11,11 +11,14 @@ CREATE FOR
     // outer loop for rows
 
 
-        CREATE another FOR inside rows loop
+        CREATE another FOR inside the rows loop
             SET columns to 0
             CONDITION columns LESS than 16
             INCREMENT columns by 1
-                    CREATE div element here
+                    SET div TO createElement("div");
                     APPEND div to container
             ENDFOR
 ENDFOR
+
+2. Using Flexbox to make the divs appear as a grid
+    - Probably adjust the border of each first to see how they all look.
