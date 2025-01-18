@@ -30,4 +30,17 @@ ENDFOR
         - Find a way to rename the "div"s made inside the javascript so its easier
             for me to target?
                 - Nah I dont need to do that, I can just target the "div" element, but I gotta check if it affects the .container div too
-        
+            - Finished the 16x16 grid but the grid looks really big in general
+            - if I wanted to make it smaller I'm pretty sure I cant make it 16x16 lol
+
+3. Hover effect
+    - I definitely need to do the document.AddEventListener thing here 
+    - Need to research how to:
+    "There are multiple ways to change the color of the divs, including:
+Adding a new class to the div.
+Changing the div’s background color using JavaScript."
+    - Maybe math.floor()and then math.random? choose between an array of colours.
+    - I don't think I need to loop here, do I?
+    - I can start off simple, just with a single colour.
+
+    
