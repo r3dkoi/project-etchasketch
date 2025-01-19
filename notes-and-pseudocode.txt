@@ -62,22 +62,39 @@ Changing the div’s background color using JavaScript."
     - in JS 
         TARGET button 'reset'
             INSIDE reset 
-                PROMPT user 'How big do you want your sketchpad to be? 
-                    LIMIT grid size to 100. 
-                        ^ Using parseInt(userRows) and parseInt(userColumns)
-                    SET container.innerHTML to "" // this clears the old sketchpad
-                        SET userRows = '' // this is let
-                        SET userColumns = '' // this is let
+                SET userRowsInput to PROMPT user 'How many rows do you want your sketchpad to have?'
+                SET userColumnsInput to PROMPT user 'How many columns do you want your sketchpad to have?'
+                
+                SET userRows to PARSEINT(userRowsInput) with a base of 10. 
+                SET userColumns to PARSEINT(userColumnsInput) with a base of 10.
+                //checks if user input is a valid number
+
+                IF 
+                    userRows IS NOT A NUMBER
+                    OR 
+                    userColumns IS NOT A NUMBER
+                    OR 
+                    userRows is GREATER THAN a 100
+                    OR 
+                    userColumns is GREATER THAN a 100
+                    ALERT user "Please enter valid numbers that less than or equal to 100."
+                      // checks if user input's integers is limited to 100
+                    ELSE 
+                        ALERT user "Generating a new sketchpad by + userRows + "x" + userColumns +."
+                            //concatenating them with + because its not a string anymore. `` used for strings.
+                         SET container.innerHTML to "" // this clears the old sketchpad
                         FOR 
-                            SET userRows to `` // user input
-                            CONDITION userRows to LESS THAN `` // user input
+                            SET userRows to 0 // user input
+                            CONDITION userRows to LESS THAN userRows // user input
                             INCREMENT by 1
                             // rows generation
                             FOR 
-                                SET userColumns to ``
-                                CONDITION userColumns to LESS THAN ``
+                                SET userColumns to 0
+                                CONDITION userColumns to LESS THAN userColumns
                                 INCREMENT by 1
                                     SET div to document.createElement("div")
                                     ADD grid-item to div
                                     APPEND div to container
+                            ENDFOR
+                        ENDFOR
 
