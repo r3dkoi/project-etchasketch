@@ -29,6 +29,8 @@ ENDFOR
         - Use CSS to edit the div elements inside the .container
         - Find a way to rename the "div"s made inside the javascript so its easier
             for me to target?
+            - Yeah I did actually have to do this lol
+            - Have to use div.classList.add() to add another reference to the div.
                 - Nah I dont need to do that, I can just target the "div" element, but I gotta check if it affects the .container div too
             - Finished the 16x16 grid but the grid looks really big in general
             - if I wanted to make it smaller I'm pretty sure I cant make it 16x16 lol
@@ -39,8 +41,43 @@ ENDFOR
     "There are multiple ways to change the color of the divs, including:
 Adding a new class to the div.
 Changing the div’s background color using JavaScript."
+    -  WOW I REALLY NEEDED TO JUST... CHANGE THE BACKGROUND LMFAO NOT COLOR.
     - Maybe math.floor()and then math.random? choose between an array of colours.
     - I don't think I need to loop here, do I?
     - I can start off simple, just with a single colour.
+    - div.setAttribute("color: red)
+    - i also need to append this dont i?
+    - New addEventListener function I learned today:
+        - hover = mouseover
+    - document. will target the entire document, while container.addEventListener
+        - only adds an event to the .container. so gotta remember that its not always .document
+        - it can literally be any class or id I can attach a eventlistener too.
 
-    
+4. This section is about adding a button at the top of the
+    screen, the user will be asked to input the no. of squares per side
+        for the new grid. The number inputted will replace the old grid, with the new grid size.
+        This generates a brand new sketch pad in general.
+
+  - CREATE button in HTML file with class 'reset'
+    - in JS 
+        TARGET button 'reset'
+            INSIDE reset 
+                PROMPT user 'How big do you want your sketchpad to be? 
+                    LIMIT grid size to 100. 
+                        ^ Using parseInt(userRows) and parseInt(userColumns)
+                    SET container.innerHTML to "" // this clears the old sketchpad
+                        SET userRows = '' // this is let
+                        SET userColumns = '' // this is let
+                        FOR 
+                            SET userRows to `` // user input
+                            CONDITION userRows to LESS THAN `` // user input
+                            INCREMENT by 1
+                            // rows generation
+                            FOR 
+                                SET userColumns to ``
+                                CONDITION userColumns to LESS THAN ``
+                                INCREMENT by 1
+                                    SET div to document.createElement("div")
+                                    ADD grid-item to div
+                                    APPEND div to container
+
