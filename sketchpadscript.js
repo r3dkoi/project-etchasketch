@@ -27,8 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
              alert("Please enter valid numbers that are less than or equal to 100.");
             } else {
                 alert("Generating a new sketchpad by" +userRows+ "x" +userColumns+".");
-            }
-
+                container.innerHTML = "";
+                //deletes the old sketchpad
+                for (let i = 0; i < userRows; i++) {
+                    for (let j = 0; j < userColumns; j++) {
+                        let div = document.createElement("div");
+                        div.classList.add("grid-item");
+                        container.appendChild(div);
+                    };
+                };
+            };
     });
 });
 
