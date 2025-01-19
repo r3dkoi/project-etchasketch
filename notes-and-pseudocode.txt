@@ -44,6 +44,7 @@ Changing the div’s background color using JavaScript."
     -  WOW I REALLY NEEDED TO JUST... CHANGE THE BACKGROUND LMFAO NOT COLOR.
     - Maybe math.floor()and then math.random? choose between an array of colours.
     - I don't think I need to loop here, do I?
+        - plot twist, obviously i did
     - I can start off simple, just with a single colour.
     - div.setAttribute("color: red)
     - i also need to append this dont i?
@@ -51,14 +52,14 @@ Changing the div’s background color using JavaScript."
         - hover = mouseover
     - document. will target the entire document, while container.addEventListener
         - only adds an event to the .container. so gotta remember that its not always .document
-        - it can literally be any class or id I can attach a eventlistener too.
+        - it can literally be any class or id I can attach a eventlistener to.
 
 4. This section is about adding a button at the top of the
     screen, the user will be asked to input the no. of squares per side
         for the new grid. The number inputted will replace the old grid, with the new grid size.
         This generates a brand new sketch pad in general.
 
-  - CREATE button in HTML file with class 'reset'
+  - CREATE button in HTML file with class 'reset' o7
     - in JS 
         TARGET button 'reset'
             INSIDE reset 
@@ -84,13 +85,13 @@ Changing the div’s background color using JavaScript."
                             //concatenating them with + because its not a string anymore. `` used for strings.
                          SET container.innerHTML to "" // this clears the old sketchpad
                         FOR 
-                            SET userRows to 0 // user input
-                            CONDITION userRows to LESS THAN userRows // user input
+                            SET i to 0 // user input
+                            CONDITION i to LESS THAN userRows // user input
                             INCREMENT by 1
                             // rows generation
                             FOR 
-                                SET userColumns to 0
-                                CONDITION userColumns to LESS THAN userColumns
+                                SET j to 0
+                                CONDITION j to LESS THAN userColumns
                                 INCREMENT by 1
                                     SET div to document.createElement("div")
                                     ADD grid-item to div
