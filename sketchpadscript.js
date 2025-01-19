@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             div.style.background = "red";
         }
     });
+    
     const button = document.querySelector(".reset");
     button.addEventListener("onclick", function () {
         const userRowsInput = prompt("How many rows do you want your sketchpad to have?");
