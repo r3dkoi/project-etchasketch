@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if ((isNaN(userRows)) || (isNaN(userColumns)) || 
             (userRows > 100) || (userColumns > 100)) {
-                
+             alert("Please enter valid numbers that are less than or equal to 100.");
+            } else {
+                alert("Generating a new sketchpad by" +userRows+ "x" +userColumns+".");
             }
 
     });
