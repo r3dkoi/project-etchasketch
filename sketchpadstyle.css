@@ -1,9 +1,12 @@
 /* Styling the div grid */
+body {
+    background-color: #ffb3ba;
+}
 div {
     border-color: black;
     border-style: solid;
     border-width: thin;
-    padding: 50px;
+    padding: 20px;
 }
 
 .container {
@@ -20,4 +23,21 @@ div {
 h1 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
+    color: white;
+}
+
+.button-container { 
+   display: flex;
+   justify-content: center;
+   border-style: none;
+   padding-bottom: 0;
+}
+
+button {
+    border-radius: 10px;
+    background-color: peachpuff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+
 }
